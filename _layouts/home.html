@@ -1,0 +1,17 @@
+<html>
+    <head>
+            {% include head.html %}
+    </head>
+    <body>
+        {{ content }}
+
+        <p><small>Front</small></p>
+        
+        {% for post in site.posts %}
+            <p><a href="{{ post.url }}">{{ post.title }}</a>
+                <br><em>&mdash; {{ post.author }} - {{ post.date | date_to_string }}</em> 
+            </p>
+        {% endfor %}
+        
+    </body>
+</html>
